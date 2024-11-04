@@ -1,36 +1,34 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project TS Idealgewichtrechner</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Project TS Idealgewichtrechner</title>
-</head>
-
-<body>
-  <section>
-    <form>
-      <h3>Idealgewichtrechner</h3>
-      <div>
-        <label for="cm">Körpergröße</label>
-        <input type="number" name="cm" id="heightInput">
-      </div>
-      <div>
-        <label for="age">Alter</label>
-        <input type="number" name="age" id="ageInput">
-      </div>
-      <label for="bodyform">Körperbau</label>
-      <div>
-        <label for="bodyform">Breit</label>
-        <input type="radio" name="bodyform" id="breitCheck">
-        <label for="bodyform">Schmal</label>
-        <input type="radio" name="bodyform" id="schmalCheck">
-        <button type="button" id="btn">Submit</button>
-      </div>
-      <p>Dein Idealgewicht ist <span id="output"></span></p>
-    </form>
-  </section>
-  <script type="module" src="/src/main.ts"></script>
-</body>
-
+  <body>
+    <section>
+      <form>
+        <h3>Idealgewichtrechner</h3>
+        <div>
+          <label for="cm">Körpergröße</label>
+          <input type="number" name="cm" id="heightInput" min="50" />
+        </div>
+        <div>
+          <label for="age">Alter</label>
+          <input type="number" name="age" id="ageInput" min="1" />
+        </div>
+        <label for="bodyform">Körperbau</label>
+        <div>
+          <input type="radio" name="bodyform" id="breitCheck" checked />
+          <label for="bodyform">Breit</label>
+          <input type="radio" name="bodyform" id="schmalCheck" />
+          <label for="bodyform">Schmal</label>
+          <button type="button" id="btn">Submit</button>
+        </div>
+        <p>Dein Idealgewicht ist <span id="output"></span></p>
+      </form>
+    </section>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
 </html>
